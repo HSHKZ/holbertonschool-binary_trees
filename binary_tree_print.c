@@ -2,13 +2,14 @@
 
 /**
  * print_t - Stores recursively each level in an array of strings
- * @tree: The pointer to the node to print
- * @offset: The offset to print
- * @depth: The depth of the node
- * @s: The buffer
- * Return: The length of printed tree after process
+ *
+ * @tree: Pointer to the node to print
+ * @offset: Offset to print
+ * @depth: Depth of the node
+ * @s: Buffer
+ *
+ * Return: length of printed tree after process
  */
-
 static int print_t(const binary_tree_t *tree, int offset, int depth, char **s)
 {
 	char b[6];
