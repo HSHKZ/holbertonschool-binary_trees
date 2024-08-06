@@ -7,22 +7,14 @@
  *
  * If tree or func is NULL, do nothing
  */
-
-size_t binary_tree_height(const binary_tree_t *tree)
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
-	size_t count_l = 0, count_r = 0;
-
 	if (tree == NULL)
-		return (0);
+		return;
+	if (func == NULL)
+		return;
 
-	if (tree->left == NULL && tree->right == NULL)
-		return (0);
-
-	count_l = binary_tree_height(tree->left);
-	count_r = binary_tree_height(tree->right);
-
-	if (count_l >= count_r)
-		return (count_l + 1);
-	else
-		return (count_r + 1);
+	binary_tree_inorder(tree->left, func);
+	func(tree->n);
+	binary_tree_inorder(tree->right, func);
 }
