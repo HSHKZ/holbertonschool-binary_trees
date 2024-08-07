@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # C - Binary Trees
 
 This project provides a comprehensive implementation of binary trees in C. It includes a range of functions for creating, manipulating, and analyzing binary trees, following the Betty coding style and adhering to the GNU89 standard.
@@ -149,3 +150,11 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o binary_trees
 
 - Lucas Niel - @Lucas Niel
 - Ibtissem Bendahma - @Ibtissem Bendahma
+=======
+# Holberton School Binary trees 
+This project contains implementations of various functions to manipulate binary trees in C. It is part of the Holberton School curriculum.
+
+## Description
+
+The project focuses on implementing basic operations on binary trees, including node creation and traversal. It also includes specific functionality to find the uncle of a node in a binary tree.
+>>>>>>> feature-branch2
