@@ -83,3 +83,69 @@ git clone https://github.com/your-username/holbertonschool-binary_trees.git
 cd holbertonschool-binary_trees
 
 gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c -o binary_trees
+
+## Requirements
+
+- **GCC compiler** (version 4.8.4 or later).
+- **Ubuntu 20.04 LTS** or a similar Unix-like operating system.
+
+## Examples
+
+Below are some examples demonstrating how to use the binary tree functions:
+
+```c
+#include "binary_trees.h"
+#include <stdio.h>
+
+int main(void)
+{
+    binary_tree_t *root = create_node(10);
+
+    insert_left(root, 5);
+    insert_right(root, 15);
+    insert_left(root->left, 3);
+    insert_right(root->left, 7);
+    insert_left(root->right, 12);
+    insert_right(root->right, 18);
+
+    printf("Preorder traversal: ");
+    preorder_traversal(root);
+    printf("\n");
+
+    printf("Inorder traversal: ");
+    inorder_traversal(root);
+    printf("\n");
+
+    printf("Postorder traversal: ");
+    postorder_traversal(root);
+    printf("\n");
+
+    printf("Tree height: %d\n", tree_height(root));
+    printf("Tree depth of root: %d\n", tree_depth(root));
+    printf("Tree size: %d\n", tree_size(root));
+    printf("Tree leaves: %d\n", tree_leaves(root));
+    printf("Tree balance: %d\n", tree_balance(root));
+    printf("Is tree full? %s\n", is_full(root) ? "Yes" : "No");
+    printf("Is tree perfect? %s\n", is_perfect(root) ? "Yes" : "No");
+
+    delete_tree(root);
+    return (0);
+}
+
+## Testing
+
+To test the binary tree functions, follow these steps:
+
+    Create or modify the main.c file to include your test cases.
+    Compile the code with:
+
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o binary_trees
+
+    Run the compiled program with:
+
+./binary_tree_test
+
+## Authors
+
+- Lucas Niel - @Lucas Niel
+- Ibtissem Bendahma - @Ibtissem Bendahma
