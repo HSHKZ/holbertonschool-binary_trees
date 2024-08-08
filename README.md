@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # C - Binary Trees
 
 This project provides a comprehensive implementation of binary trees in C. It includes a range of functions for creating, manipulating, and analyzing binary trees, following the Betty coding style and adhering to the GNU89 standard.
